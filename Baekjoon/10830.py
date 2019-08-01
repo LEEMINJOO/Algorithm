@@ -12,7 +12,6 @@ def mat_mul(A,B,N):
 			tmp %= 1000
 			row_tmp += [tmp]
 		result.append(row_tmp)
-
 	return result
 
 N, B = map(int,q().split())
@@ -22,7 +21,7 @@ for i in range(N):
 
 result = 1
 A_mul = A[:]
-for i,a in enumerate(bin(B)[-1:1:-1]):
+for a in bin(B)[-1:1:-1]:
 	if int(a) == 1:
 		if result == 1:
 			result = A_mul
